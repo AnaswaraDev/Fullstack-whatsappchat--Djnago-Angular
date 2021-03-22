@@ -1,0 +1,45 @@
+<br><br>
+
+<body>
+    <div class="container">
+        <h4></h4>
+
+        <div class="inbox_people">
+           
+            <div class="headind_srch">
+
+         
+                <div class="srch_bar  offset-2 ">
+                    <div class="input-group row" >
+                        <input type="text" [(ngModel)]="searchtext"  class="search col-md" (keyup)="search1()" placeholder="Search.."><br> &nbsp;&nbsp; 
+                       
+                    </div>   
+
+                 
+                    
+                </div>
+            </div>
+            <div class="inbox_chat" style="color:rgb(139, 16, 16); " *ngIf="searchwork" >
+
+                <!--for loop-->
+                <div class="chat_list" *ngFor="let all of users1">
+                    <!--for loop-->
+                    <div class="chat_people">
+
+                        <div class="chat_img">
+                            <img alt="avatar" mat-card-avatar src="assets/images/baby1.jpg">
+                        </div> &nbsp; &nbsp;
+                        <div class="chat_ib">
+
+                            <a [routerLink]="['/home',all.id]">
+                                <!--here-->
+                                <p> {{all.username}} </p>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

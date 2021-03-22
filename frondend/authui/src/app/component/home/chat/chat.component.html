@@ -1,0 +1,49 @@
+
+<h2></h2>
+<div style="padding-left:14px;padding-right:0px;padding-top:0px;padding-bottom:0px;">
+    <div style="height:650px;" class="container-fluid d-flex justify-center   ">
+        <div class="card mt-5" style="background-color:#ece5dd;">
+            <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="pb-3"></span>
+                <i class="fas fa-video"></i>
+            </div>
+
+
+            <div *ngIf="viewmsg;">
+                <div *ngFor="let view of viewmsg" >
+                    <div class="d-flex justify-content-start msgbox" *ngIf="view.sent == reciever.id">
+                        <p>{{view.message}}</p> &nbsp;&nbsp;
+                        <span class="time-right text-muted"  >{{view.time | date:'medium'}}</span>
+                    </div>
+            
+            
+                    <div class="d-flex justify-content-end msgbox1" *ngIf="view.sent == sender.id">
+                        
+                        <p>{{view.message}}</p> &nbsp;
+                        <span class="time-left text-muted" >{{view.time | date:'medium'}}</span>
+                    </div>
+            
+            
+                </div>
+            </div>
+
+
+
+            <div class="col">
+                <div class="row">
+
+                </div>
+               
+            </div>
+            <br><br><br> <br><br><br>
+            <div class="input-group">
+                <textarea class="form-control custom-control" rows="3"
+                    style="resize:none;border-radius:0px;font-size: 12px;" name="message" [(ngModel)] = "form.message"></textarea>
+
+                <button style="background-color: rgb(188, 207, 189); " class="input-group-addon btn "(click)="send()">Send</button>
+
+            </div>
+        </div>
+    </div>
+</div>

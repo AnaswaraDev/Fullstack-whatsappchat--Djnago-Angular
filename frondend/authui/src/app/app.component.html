@@ -1,0 +1,37 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark " style="background-color: #1cb963; padding-left: 1192px; " >
+    <a href="#" class="navbar-brand"></a>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item" >
+        <a href="register" class="nav-link" style="color:white;" >Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="login" class="nav-link" style="color:white;">Login</a>
+      </li>
+   
+  
+  </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="profile" style="color:white;" >{{ person.username }}</a>
+      </li>
+      <li class="nav-item" >
+        <a href class="nav-link" (click)="logout()" style="color:white;" >LogOut</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="home" class="nav-link" style="color:white;">Home</a>
+      </li>
+    
+
+   <!-- <li class="nav-item">
+      <a href="user" class="nav-link" style="color:white;">User</a>
+    </li>-->
+  </ul>
+  </nav>
+
+  <div >
+    <router-outlet></router-outlet>
+  </div>
+</div>

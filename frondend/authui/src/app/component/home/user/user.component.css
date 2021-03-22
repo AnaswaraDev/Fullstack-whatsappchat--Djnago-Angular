@@ -1,0 +1,69 @@
+container {
+  display: inline-block;
+}
+img{ max-width:100%;}
+.inbox_people {
+
+background-color: rgb(59, 155, 102);
+width:300px;
+border-right:1px solid #7a1717;
+}
+
+.recent_heading {float: left; width:70%;}
+.srch_bar {
+  display: inline-block;
+  text-align: right;
+  width: 70%; 
+  border-radius: 0%;
+  }
+.headind_srch{ padding:10px 29px 10px 20px; border-bottom:1px solid #429969;}
+
+.recent_heading h4 {
+color: #b7e0eb;
+font-size: 21px;
+margin: auto;
+}
+.srch_bar input
+{
+   border:0px solid #4ab5b9;
+   border-width:0 0 1px 0;
+    width:80%; 
+     padding:2px 0 4px 4px;
+     background:none;
+    }
+
+.srch_bar .input-group-addon button {
+background: white none repeat scroll 0 0;
+
+padding: 0;
+color: #11831b;
+font-size: 18px;
+}
+.srch_bar .input-group-addon { color:white; margin: 0 0 0 -27px;}
+.input-group{
+  background-color: white;
+  color:white;
+}
+
+.chat_ib h5{ font-size:15px; color:black; margin:0 0 8px 0;}
+.chat_ib h5 span{ font-size:13px; float:right;}
+.chat_ib p{ font-size:14px; color:black; margin:auto}
+.chat_img {
+float: left;
+width: 11%;
+}
+.chat_ib {
+float: left;
+padding: 0 0 0 15px;
+width: 88%;
+}
+
+.chat_people{ overflow:hidden; clear:both;}
+.chat_list {
+border-bottom: 1px solid #358550;
+margin: 0;
+padding: 18px 16px 10px;
+}
+.inbox_chat { height: 550px; overflow-y: scroll;}
+
+
